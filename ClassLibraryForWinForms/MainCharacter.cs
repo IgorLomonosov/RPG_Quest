@@ -92,7 +92,7 @@ namespace ClassLibraryForWinForms
         }
         public void UsePotion()
         {
-            int potionHealingAmount = 5;
+            const int potionHealingAmount = 5;
             if (MaxHealthPoints != HealthPoints)
             {
                 PotionsHeld--;
