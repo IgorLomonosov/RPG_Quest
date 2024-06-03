@@ -25,4 +25,9 @@ Pattern Factory is used in creation of different quests in Classes [QuestFactory
 ### Strategy
 Pattern Strategy is used in [MainCharacter Class](./ClassLibraryForWinForms/MainCharacter.cs#L29-L51) for attack and defense using [IAttackStrategy](./ClassLibraryForWinForms/IAttackStrategy.cs#L9-L20) and [IDefenseStrategy](./ClassLibraryForWinForms/IDefenseStrategy.cs#L9-L23) classes.
 ## Refactoring Techniques
-
+### Extract Method
+Extract Method is used in Methods [Attacked](./ClassLibraryForWinForms/MainCharacter.cs#L52-L60) and [CalculateDamage](./ClassLibraryForWinForms/MainCharacter.cs#L62-L74) in MainCharacter Class to improve readability.
+### Encapsulate Field
+Encapsulate Field is used in [MainCharacter Class](./ClassLibraryForWinForms/MainCharacter.cs#L14-L27) to improve access control.
+### Replace Magic Number with Symbolic Constant
+Replace Magic Number with Symbolic Constant is used in method [UsePotion](./ClassLibraryForWinForms/MainCharacter.cs#L93-L105) in MainCharacter Class to improve readability by creating understandable variable.
