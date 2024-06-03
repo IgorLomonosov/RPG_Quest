@@ -1,0 +1,2 @@
+Фірс,25,25,True,2,1,0,C:\Users\Lomonosov\source\repos\labs(2)\OOP\1_year_course\images\human male.png,40,13,Вигнутий кинжал,4,Залізна броня,3,1
+2,2,True,True,True,False,True,True,True,True,False

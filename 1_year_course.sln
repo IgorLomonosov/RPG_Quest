@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryForWinForms", "ClassLibraryForWinForms\ClassLibraryForWinForms.csproj", "{36C04EBE-4CA2-44B0-B775-58A5ABD51B71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweet Pudding", "WinFormApp\Sweet Pudding.csproj", "{EB71E51E-4819-4A51-AF78-B628FE5E7521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C04EBE-4CA2-44B0-B775-58A5ABD51B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C04EBE-4CA2-44B0-B775-58A5ABD51B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C04EBE-4CA2-44B0-B775-58A5ABD51B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C04EBE-4CA2-44B0-B775-58A5ABD51B71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB71E51E-4819-4A51-AF78-B628FE5E7521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB71E51E-4819-4A51-AF78-B628FE5E7521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB71E51E-4819-4A51-AF78-B628FE5E7521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB71E51E-4819-4A51-AF78-B628FE5E7521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {766C35EC-E573-47F7-B196-461842810260}
+	EndGlobalSection
+EndGlobal
