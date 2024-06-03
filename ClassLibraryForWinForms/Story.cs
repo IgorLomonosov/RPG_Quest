@@ -8,6 +8,8 @@ namespace ClassLibraryForWinForms
 {
     public class Story
     {
+        private static Story instance;
+
         public int Location { get; set; }
         public int GameState { get; set; }
         public bool LeatherArmourAquired { get; set; }
@@ -20,7 +22,8 @@ namespace ClassLibraryForWinForms
         public bool CurvedDaggerAquired { get; set; }
         public bool PermissionToEnterTown { get; set; }
         public bool KeyFromTowerAquired { get; set; }
-        public Story()
+
+        private Story()
         {
             Location = 0;
             GameState = 0;
@@ -35,5 +38,18 @@ namespace ClassLibraryForWinForms
             PermissionToEnterTown = false;
             KeyFromTowerAquired = false;
         }
+
+        public static Story Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Story();
+                }
+                return instance;
+            }
+        }
     }
+
 }
