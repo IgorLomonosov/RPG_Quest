@@ -8,16 +8,21 @@ Game also has quests system and progress saving features.
 Good luck in adventure called "Sweet Pudding".
 ## Programming Principles
 ### DRY
-Principle DRY is used in Entity Class in constructors with repeating code to initialize properties.
+Principle DRY is used in [Entity Class](./ClassLibraryForWinForms/Entity.cs#L11-L38) in constructors with repeating code to initialize properties.
 ### KISS
-Principle KISS is used in Story Class in simple checking of the game state  by using boolean properties.
+Principle KISS is used in [Story Class](./ClassLibraryForWinForms/Story.cs#L9-L38) in simple checking of the game state  by using boolean properties.
 ### YAGNI
-Principle YAGNI is used in Story Class in existence of needed properties for checking game state.
+Principle YAGNI is used in [Story Class](./ClassLibraryForWinForms/Story.cs#L11-L22) in existence of needed properties for checking game state.
 ### Composition Over Inheritance
-Principle Composition Over Inheritance is used in MainCharacter Class by using properties 'Weapon' and 'Armour' like objects of other Classes.
+Principle Composition Over Inheritance is used in [MainCharacter Class](./ClassLibraryForWinForms/MainCharacter.cs#L12-L13) by using properties 'Weapon' and 'Armour' like objects of other Classes.
 ### Fail Fast
-Principle Fail Fast is used in MainCharacter Class to check function for exception when number of 'PotionsHeld' equals '0'
+Principle Fail Fast is used in [MainCharacter Class](./ClassLibraryForWinForms/MainCharacter.cs#L57-L69) to check function for exception when number of 'PotionsHeld' equals '0'
 ## Design Patterns
-
+### Singleton
+Pattern Singleton is used in [Story Class](./ClassLibraryForWinForms/Story.cs#L42-L52) to make only one istance of object of Story Class at the time.
+### Factory Method
+Pattern Factory is used in creation of different quests in Classes [QuestFactory](./ClassLibraryForWinForms/QuestFactory.cs#L9-L12), [DefaultQuestFactory](./ClassLibraryForWinForms/DefaultQuestFactory.cs#L11-L15), [CustomQuestFactory](./ClassLibraryForWinForms/CustomQuestFactory.cs#L9-28).
+### Strategy
+Pattern Strategy is used in [MainCharacter Class](./ClassLibraryForWinForms/MainCharacter.cs#L29-L51) for attack and defense using [IAttackStrategy](./ClassLibraryForWinForms/IAttackStrategy.cs#L9-L20) and [IDefenseStrategy](./ClassLibraryForWinForms/IDefenseStrategy.cs#L9-L23) classes.
 ## Refactoring Techniques
 
