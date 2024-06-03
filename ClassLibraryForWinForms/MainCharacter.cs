@@ -14,6 +14,10 @@ namespace ClassLibraryForWinForms
         public int PotionsHeld { get; set; }
         public int MoneyHeld { get; set; }
         public List<Quest> quests { get; set; }
+
+        private IAttackStrategy attackStrategy;
+        private IDefenseStrategy defenseStrategy;
+
         public MainCharacter() : base()
         {
             Armour = new Armour();
@@ -22,33 +26,28 @@ namespace ClassLibraryForWinForms
             MoneyHeld = 20;
             quests = new List<Quest>();
             quests.Add(new Quest());
+            attackStrategy = new DefaultAttackStrategy();
+            defenseStrategy = new DefaultDefenseStrategy();
         }
-        public void Attack(ref NPC nPC)
-        {
-            nPC.HealthPoints -= (int)((DamageDealt + Weapon.DamageAdded) - nPC.Defense);
-        }
-        public void Attacked(NPC nPC)
-        {
-            Random random = new Random();
-            if (random.Next(0, 10) <= 5)
-            {
-                if ((nPC.DamageDealt + 2) - (Defense + Armour.DefenseAdded) >= 0)
-                {
-                    HealthPoints -= (int)((nPC.DamageDealt + 2) - (Defense + Armour.DefenseAdded));
-                }
-            }
-            else if ((nPC.DamageDealt) - (Defense + Armour.DefenseAdded) >= 0)
-            {
-                HealthPoints -= (int)((nPC.DamageDealt) - (Defense + Armour.DefenseAdded));
-            }
 
-        }
-        public void Defended(NPC nPC)
+        public void Attack(ref NPC npc)
         {
-            if (nPC.DamageDealt - (Defense + 1 + Armour.DefenseAdded) >= 0)
-            {
-                HealthPoints -= (int)(nPC.DamageDealt - (Defense + 1 + Armour.DefenseAdded));
-            }
+            attackStrategy.Attack(ref npc, this);
+        }
+
+        public void Defended(NPC npc)
+        {
+            defenseStrategy.Defend(npc, this);
+        }
+
+        public void SetAttackStrategy(IAttackStrategy strategy)
+        {
+            attackStrategy = strategy;
+        }
+
+        public void SetDefenseStrategy(IDefenseStrategy strategy)
+        {
+            defenseStrategy = strategy;
         }
         public void Rest()
         {
