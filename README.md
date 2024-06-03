@@ -6,3 +6,18 @@ There is also inventory, where you can choose your weapon and armour, drink poti
 On the pre-final location there is shop, where you can buy the best armour and weapon in the game.
 Game also has quests system and progress saving features.
 Good luck in adventure called "Sweet Pudding".
+## Programming Principles
+### DRY
+Principle DRY is used in Entity Class in constructors with repeating code to initialize properties.
+### KISS
+Principle KISS is used in Story Class in simple checking of the game state  by using boolean properties.
+### YAGNI
+Principle YAGNI is used in Story Class in existence of needed properties for checking game state.
+### Composition Over Inheritance
+Principle Composition Over Inheritance is used in MainCharacter Class by using properties 'Weapon' and 'Armour' like objects of other Classes.
+### Fail Fast
+Principle Fail Fast is used in MainCharacter Class to check function for exception when number of 'PotionsHeld' equals '0'
+## Design Patterns
+
+## Refactoring Techniques
+

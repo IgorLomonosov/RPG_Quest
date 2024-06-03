@@ -56,16 +56,18 @@ namespace ClassLibraryForWinForms
         }
         public void UsePotion()
         {
+            if (PotionsHeld <= 0)
+            {
+                throw new InvalidOperationException("No potions available");
+            }
+
             if (MaxHealthPoints != HealthPoints)
             {
                 PotionsHeld--;
-                if (HealthPoints + 5 <= MaxHealthPoints)
-                {
-                    HealthPoints += 5;
-                }
-                else HealthPoints = MaxHealthPoints;
+                HealthPoints = Math.Min(HealthPoints + 5, MaxHealthPoints);
             }
         }
+
         public bool BuyPotion(int cost)
         {
             if (MoneyHeld >= cost)
